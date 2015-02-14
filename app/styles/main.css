@@ -1,0 +1,42 @@
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+table,
+div,
+button,
+input,
+form {
+  font-family: 'Open Sans', serif;
+  font-size: 14px;
+  color: #666;
+}
+
+.browsehappy {
+  background: #ccc;
+  color: #000;
+  margin: 0.2em 0;
+  padding: 0.2em 0;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact a {
+  text-decoration: none;
+  color: #666;
+}
+
+.fa-github,
+.fa-linkedin {
+  font-size: 25px;
+  padding: 5px;
+}
+
+.panel {
+  border-radius: 0;
+}
+
+.panel li {
+  list-style:none;
+}

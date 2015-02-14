@@ -1,0 +1,43 @@
+img.splash {
+  height: 125px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  img.splash {
+    height: 200px;
+  }
+}
+
+@media (min-width: 992px) {
+  img.splash {
+    height: 300px;
+  }
+}
+
+.navbar.navbar-default {
+  margin-bottom: 40px;
+}
+
+.profile-picture {
+  height: auto;
+  margin-top: -25px;
+  padding-top: 0;
+  position: absolute;
+}
+
+.profile-picture img {
+  border-radius: 100%;
+  height: 100px;
+  width: 100px;
+}
+
+.navbar-collapse {
+  padding-left: 125px;
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse {
+    padding-left: 100px;
+  }
+}
