@@ -5,6 +5,7 @@
     "bootstrap": "~3.2.0",
     "sticky-kit": "~1.1.1",
     "photoswipe": "~4.0.5",
-    "headroom.js": "~0.7.0"
+    "headroom.js": "~0.7.0",
+    "jquery.lazyload": "~1.9.3"
   }
 }

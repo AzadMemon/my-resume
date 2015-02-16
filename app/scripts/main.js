@@ -3,6 +3,7 @@
 
   onWindowResize();
   initHeadroom();
+  initLazyLoad();
 
   $(window).resize(onWindowResize);
   $('.thumbnail').on('click', onThumbnailClick);
@@ -16,6 +17,10 @@
     if ($(window).width() < 768) {
       addHeadroomCss();
     }
+  }
+
+  function initLazyLoad() {
+    $('img.lazy').lazyload({effect: 'fadeIn'});
   }
 
   function initStickySidebar() {

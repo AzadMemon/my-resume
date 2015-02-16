@@ -3,16 +3,27 @@
 }
 
 .navbar .navbar-brand {
+  border-radius: 100%;
+  height: 100px;
+  margin-left: 15px;
   margin-top: -30px;
   padding-top: 0;
-  margin-left:15px;
   position: absolute;
+  width: 100px;
+}
+
+.navbar .navbar-brand .profile-picture {
   border-radius: 100%;
   height: 100px;
   width: 100px;
-  background-image:url('../images/profile-picture.png');
-  background-size: 100px 100px;
-  background-position-y:15px;
+  overflow: hidden;
+}
+
+.navbar .navbar-brand .profile-picture img {
+  height:100px;
+  position: relative;
+  top: 15px;
+  width: 100px;
 }
 
 .navbar-collapse {

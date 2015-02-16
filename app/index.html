@@ -38,7 +38,11 @@
 <nav class="navbar navbar-default headroom">
   <div class="container">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/"></a>
+      <a class="navbar-brand" href="/">
+        <div class="profile-picture">
+          <img class="lazy" data-original="images/profile-picture.png">
+        </div>
+      </a>
     </div>
 
     <div class="navbar-collapse">
@@ -96,25 +100,26 @@
           </ul>
 
           <h2>Screenshots:</h2>
+
           <div class="screenshots row">
             <div class="col-xs-6 col-md-3">
               <a class="thumbnail" data-index="0" data-src="images/ttc-profile1.png" data-width="1300" data-height="700">
-                <img src="images/ttc-profile-thumbnail.png">
+                <img class="lazy" data-original="images/ttc-profile-thumbnail.png">
               </a>
             </div>
             <div class="col-xs-6 col-md-3">
               <a class="thumbnail" data-index="1" data-src="images/ttc-conversationlist1.png" data-width="1300" data-height="700">
-                <img src="images/ttc-conversationlist-thumbnail.png">
+                <img class="lazy" data-original="images/ttc-conversationlist-thumbnail.png">
               </a>
             </div>
             <div class="col-xs-6 col-md-3">
               <a class="thumbnail" data-index="2" data-src="images/ttc-conversationview1.png" data-width="1300" data-height="700">
-                <img src="images/ttc-conversationview-thumbnail.png">
+                <img class="lazy" data-original="images/ttc-conversationview-thumbnail.png">
               </a>
             </div>
             <div class="col-xs-6 col-md-3" data-index="3">
               <a class="thumbnail" data-src="images/ttc-scheduling1.png" data-width="1300" data-height="700">
-                <img src="images/ttc-scheduling-thumbnail.png">
+                <img class="lazy" data-original="images/ttc-scheduling-thumbnail.png">
               </a>
             </div>
           </div>
@@ -150,15 +155,16 @@
           </ul>
 
           <h2>Screenshots:</h2>
+
           <div class="screenshots row">
             <div class="col-xs-6 col-md-3">
               <a class="thumbnail" data-index="0" data-src="images/envisage-remi1.png" data-width="1500" data-height="600">
-                <img src="images/envisage-remi-thumbnail.png">
+                <img class="lazy" data-original="images/envisage-remi-thumbnail.png">
               </a>
             </div>
             <div class="col-xs-6 col-md-3">
               <a class="thumbnail" data-index="1" data-src="images/envisage-cnh1.png" data-width="1300" data-height="680">
-                <img src="images/envisage-cnh-thumbnail.png">
+                <img class="lazy" data-original="images/envisage-cnh-thumbnail.png">
               </a>
             </div>
           </div>
@@ -207,15 +213,16 @@
           </ul>
 
           <h2>Screenshots:</h2>
+
           <div class="screenshots row">
             <div class="col-xs-6 col-md-3">
               <a class="thumbnail" data-index="0" data-src="images/scicalc-portrait1.png" data-width="450" data-height="800">
-                <img src="images/scicalc-portrait-thumbnail.png">
+                <img class="lazy" data-original="images/scicalc-portrait-thumbnail.png">
               </a>
             </div>
             <div class="col-xs-6 col-md-3">
               <a class="thumbnail" data-index="1" data-src="images/scicalc-landscape1.png" data-width="1300" data-height="700">
-                <img src="images/scicalc-landscape-thumbnail.png">
+                <img class="lazy" data-original="images/scicalc-landscape-thumbnail.png">
               </a>
             </div>
           </div>
@@ -223,7 +230,7 @@
       </div>
     </div>
     <div class="contact col-md-3 col-md-pull-9">
-      <a href="/" class="profile-picture"><img src="images/profile-picture.png"></a>
+      <a href="/" class="profile-picture"><img class="lazy" src="images/profile-picture.png"></a>
       <a href="/" class="name">Azad Memon</a>
       <a href="mailto::azad.memon@gmail.com" class="email">azad.memon[at]gmail[dot]com</a>
 
@@ -266,11 +273,9 @@
         <div class="pswp__share-tooltip"></div>
       </div>
 
-      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-      </button>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
 
-      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
 
       <div class="pswp__caption">
         <div class="pswp__caption__center"></div>
@@ -305,6 +310,7 @@
 <script src="bower_components/photoswipe/dist/photoswipe-ui-default.js"></script>
 <script src="bower_components/headroom.js/dist/headroom.js"></script>
 <script src="bower_components/headroom.js/dist/jQuery.headroom.js"></script>
+<script src="bower_components/jquery.lazyload/jquery.lazyload.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
