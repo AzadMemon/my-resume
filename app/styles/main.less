@@ -1,0 +1,171 @@
+// Core Variables and Mixins
+@import "variables";
+// Bootstrap Mixins - Utilities
+@import "mixins/hide-text.less";
+@import "mixins/opacity.less";
+@import "mixins/responsive-visibility.less";
+@import "mixins/tab-focus.less";
+@import "mixins/vendor-prefixes.less";
+// Bootstrap Mixins - Components
+@import "mixins/buttons.less";
+@import "media.less";
+@import "mixins/panels.less";
+// Bootstrap Mixins - Skins
+@import "mixins/border-radius.less";
+// Bootstrap Mixins - Layout
+@import "mixins/clearfix.less";
+@import "mixins/center-block.less";
+@import "mixins/grid-framework.less";
+@import "mixins/grid.less";
+@import "mixins";
+// Bootstrap - Reset and dependencies
+@import "normalize.less";
+// Bootstrap Core CSS
+@import "scaffolding.less";
+@import "grid.less";
+@import "buttons.less";
+// Bootstrap Components
+@import "thumbnails.less";
+@import "panels.less";
+@import "wells.less";
+// Bootstrap Utility Classes
+@import "utilities.less";
+@import "responsive-utilities.less";
+@import (inline) "photoswipe.css";
+@import (inline) "default-skin/default-skin.css";
+
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+table,
+div,
+button,
+input,
+form {
+  font-family: 'Open Sans', serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+}
+
+body {
+  background-color: #F2F1EF;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.browsehappy {
+  background: #ccc;
+  color: #000;
+  margin: 0.2em 0;
+  padding: 0.2em 0;
+}
+
+/* Header */
+.profile-picture {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+/* Body */
+.card {
+  border-radius: 0;
+  cursor: default;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 20px 35px;
+}
+
+@card-height: 350px;
+.card-collapsed {
+  display: block;
+  min-height: @card-height;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .card-image {
+    .make-md-column(3);
+
+    a {
+      line-height: @card-height;
+    }
+
+    a img {
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  .card-body {
+    font-weight: 500;
+    margin-top: auto;
+    margin-right: auto;
+    .make-md-column(9);
+    padding: 0;
+    top: 95px;
+
+    .card-heading {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    button {
+      float: right;
+      background-color: transparent;
+      margin-top: 45px;
+      margin-right: 25px;
+      min-height: 45px;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: #666666;
+      font-weight: 700;
+      border: 1px solid #666666;
+    }
+  }
+}
+
+.card-expanded {
+  display: none;
+  background-color: #FFFFFF;
+
+  .card-heading {
+
+  }
+
+  .card-body {
+
+  }
+}
+
+.thumbnail {
+  border-radius: 0;
+}
+
+/* Footer */
+#footer {
+  text-align: center;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #666;
+}
+
+.social-icons .icon {
+  font-size: 25px;
+  padding: 5px 10px;
+}
+
+@import "info.less";
+@import "about.less";
+@import "tenthousandcoffees.less";
+@import "envisage.less";
+@import "oicr.less";
+@import "scicalc.less";
+
+@import "font.less";
+@import "lightbox.less";
+

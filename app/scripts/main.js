@@ -1,44 +1,12 @@
 (function () {
   'use strict';
 
-  onWindowResize();
-  initHeadroom();
   initLazyLoad();
 
-  $(window).resize(onWindowResize);
   $('.thumbnail').on('click', onThumbnailClick);
-
-  function onWindowResize() {
-    if ($(window).width() >= 768) {
-      initStickySidebar();
-      removeHeadroomCss();
-    }
-
-    if ($(window).width() < 768) {
-      addHeadroomCss();
-    }
-  }
 
   function initLazyLoad() {
     $('img.lazy').lazyload({effect: 'fadeIn'});
-  }
-
-  function initStickySidebar() {
-    $('.contact').stick_in_parent();
-  }
-
-  function initHeadroom() {
-    $('.headroom').headroom({offset: 45});
-  }
-
-  function removeHeadroomCss() {
-    $('body').css('padding-top', 0);
-    $('.headroom').removeClass('navbar-fixed-top');
-  }
-
-  function addHeadroomCss() {
-    $('body').css('padding-top', 90);
-    $('.headroom').addClass('navbar-fixed-top');
   }
 
   function onThumbnailClick(event) {

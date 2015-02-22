@@ -29,18 +29,18 @@ module.exports = function (grunt) {
     config: config,
 
     watch: {
+      options: {
+        livereload: true
+      },
       js: {
-        files: ['<%= config.app %>/scripts/{,*/}*.js'],
-        options: {
-          livereload: true
-        }
+        files: ['<%= config.app %>/scripts/{,*/}*.js']
       },
       gruntfile: {
         files: ['Gruntfile.js']
       },
       styles: {
-        files: ['<%= config.app %>/styles/**/*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+        files: ['<%= config.app %>/styles/**/*.less'],
+        tasks: ['less:server', 'copy:styles']
       },
       livereload: {
         options: {
@@ -111,12 +111,34 @@ module.exports = function (grunt) {
       server: '.tmp'
     },
 
-    // Mocha testing framework configuration options
-    mocha: {
-      all: {
+    less: {
+      server: {
         options: {
-          run: true,
-          urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
+          paths: [
+            '<%= config.app %>/',
+            'bower_components/bootstrap/less',
+            'bower_components/photoswipe/dist'
+          ]
+        },
+        files: {
+          '<%= config.app %>/styles/main.css': '<%= config.app %>/styles/main.less'
+        }
+      },
+      dist: {
+        options: {
+          compress: true,
+          yuicompress: true,
+          optimization: 2,
+          cleancss: true,
+          report: 'min',
+          paths: [
+            '<%= config.app %>/',
+            'bower_components/bootstrap/less',
+            'bower_components/photoswipe/dist'
+          ]
+        },
+        files: {
+          '<%= config.app %>/styles/main.css': '<%= config.app %>/styles/main.less'
         }
       }
     },
@@ -299,6 +321,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'clean:server',
     'copy:photoswipe',
+    'less:server',
     'concurrent:server',
     'autoprefixer',
     'connect:livereload',
@@ -308,6 +331,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'useminPrepare',
+    'less:dist',
     'concurrent:dist',
     'autoprefixer',
     'concat',
