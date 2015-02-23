@@ -4,6 +4,7 @@
   initLazyLoad();
 
   $('.thumbnail').on('click', onThumbnailClick);
+  $('.learn-more').on('click', onLearnMoreClick);
 
   function initLazyLoad() {
     $('img.lazy').lazyload({effect: 'fadeIn'});
@@ -32,5 +33,17 @@
     }
     var gallery = new PhotoSwipe(photoswipeElement, PhotoSwipeUI_Default, items, options);
     gallery.init();
+  }
+
+  function onLearnMoreClick(event) {
+    var button = $(event.currentTarget);
+    var cardCollapsed = $(button.parents('.card-collapsed')[0]);
+    var card = $(cardCollapsed.parents('.card'));
+    var cardExpanded = $(cardCollapsed.prev('.card-expanded'));
+    var newHeight = cardExpanded.height();
+
+    TweenLite.to(card, 1, {height: newHeight}, 0);
+    TweenLite.to(cardCollapsed, 1, {top: newHeight}, 0);
+    TweenLite.to(cardExpanded, 1, {bottom: 0}, 0);
   }
 })();

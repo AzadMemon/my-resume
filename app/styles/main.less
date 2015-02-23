@@ -45,7 +45,7 @@ form {
   font-family: 'Open Sans', serif;
   font-size: 16px;
   font-weight: 300;
-  color: #333;
+  color: #666666;
 }
 
 body {
@@ -61,50 +61,61 @@ body {
   padding: 0.2em 0;
 }
 
-/* Header */
-.profile-picture {
-  height: 100px;
-  width: 100px;
-  border-radius: 100%;
+.details {
+  h1,
+  .bio,
+  .contact {
+    text-align: center;
+
+    @media (min-width: @screen-sm-min) {
+      text-align: left;
+    }
+  }
 }
 
 /* Body */
 .card {
+  position: relative;
   border-radius: 0;
   cursor: default;
   box-shadow: none;
   margin-bottom: 0;
-  padding: 20px 35px;
+  overflow: hidden;
+  height: 350px;
 }
 
 @card-height: 350px;
 .card-collapsed {
-  display: block;
+  display: table;
+  position: absolute;
   min-height: @card-height;
-  max-width: 850px;
+  padding: 20px 35px;
   margin-left: auto;
   margin-right: auto;
 
   .card-image {
-    .make-md-column(3);
-
-    a {
-      line-height: @card-height;
-    }
+    .make-sm-column(3);
 
     a img {
       height: 150px;
       width: 150px;
+      border-radius: 100%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (min-width: @screen-sm-min) {
+      display: table-cell;
+      float: none !important;
+      vertical-align: middle;
     }
   }
 
   .card-body {
     font-weight: 500;
-    margin-top: auto;
-    margin-right: auto;
-    .make-md-column(9);
-    padding: 0;
-    top: 95px;
+    .make-sm-column(9);
+    text-align: center;
 
     .card-heading {
       font-size: 24px;
@@ -113,22 +124,37 @@ body {
     }
 
     button {
-      float: right;
       background-color: transparent;
+      float: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
       margin-top: 45px;
-      margin-right: 25px;
       min-height: 45px;
       padding-left: 15px;
       padding-right: 15px;
-      color: #666666;
       font-weight: 700;
       border: 1px solid #666666;
+
+      @media (min-width: @screen-sm-min) {
+        float: right;
+        margin-right: 25px;
+      }
+    }
+
+    @media (min-width: @screen-sm-min) {
+      float: none !important;
+      display: table-cell;
+      text-align: left;
+      vertical-align: middle;
     }
   }
 }
 
 .card-expanded {
-  display: none;
+  position: absolute;
+  bottom: 350px;
+  width: 100%;
   background-color: #FFFFFF;
 
   .card-heading {
@@ -142,16 +168,6 @@ body {
 
 .thumbnail {
   border-radius: 0;
-}
-
-/* Footer */
-#footer {
-  text-align: center;
-}
-
-#footer a {
-  text-decoration: none;
-  color: #666;
 }
 
 .social-icons .icon {

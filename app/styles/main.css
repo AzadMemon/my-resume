@@ -2615,7 +2615,7 @@ form {
   font-family: 'Open Sans', serif;
   font-size: 16px;
   font-weight: 300;
-  color: #333;
+  color: #666666;
 }
 body {
   background-color: #F2F1EF;
@@ -2628,24 +2628,33 @@ body {
   margin: 0.2em 0;
   padding: 0.2em 0;
 }
-/* Header */
-.profile-picture {
-  height: 100px;
-  width: 100px;
-  border-radius: 100%;
+.details h1,
+.details .bio,
+.details .contact {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .details h1,
+  .details .bio,
+  .details .contact {
+    text-align: left;
+  }
 }
 /* Body */
 .card {
+  position: relative;
   border-radius: 0;
   cursor: default;
   box-shadow: none;
   margin-bottom: 0;
-  padding: 20px 35px;
+  overflow: hidden;
+  height: 350px;
 }
 .card-collapsed {
-  display: block;
+  display: table;
+  position: absolute;
   min-height: 350px;
-  max-width: 850px;
+  padding: 20px 35px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2655,31 +2664,36 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .card-collapsed .card-image {
     float: left;
     width: 25%;
   }
 }
-.card-collapsed .card-image a {
-  line-height: 350px;
-}
 .card-collapsed .card-image a img {
   height: 150px;
   width: 150px;
+  border-radius: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .card-collapsed .card-image {
+    display: table-cell;
+    float: none !important;
+    vertical-align: middle;
+  }
 }
 .card-collapsed .card-body {
   font-weight: 500;
-  margin-top: auto;
-  margin-right: auto;
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding: 0;
-  top: 95px;
+  text-align: center;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .card-collapsed .card-body {
     float: left;
     width: 75%;
@@ -2691,31 +2705,40 @@ body {
   margin-bottom: 12px;
 }
 .card-collapsed .card-body button {
-  float: right;
   background-color: transparent;
+  float: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 45px;
-  margin-right: 25px;
   min-height: 45px;
   padding-left: 15px;
   padding-right: 15px;
-  color: #666666;
   font-weight: 700;
   border: 1px solid #666666;
 }
+@media (min-width: 768px) {
+  .card-collapsed .card-body button {
+    float: right;
+    margin-right: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .card-collapsed .card-body {
+    float: none !important;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+  }
+}
 .card-expanded {
-  display: none;
+  position: absolute;
+  bottom: 350px;
+  width: 100%;
   background-color: #FFFFFF;
 }
 .thumbnail {
   border-radius: 0;
-}
-/* Footer */
-#footer {
-  text-align: center;
-}
-#footer a {
-  text-decoration: none;
-  color: #666;
 }
 .social-icons .icon {
   font-size: 25px;
@@ -2730,8 +2753,18 @@ body {
   padding-bottom: 0;
 }
 #info .profile-picture {
-  display: inline-block;
+  display: block;
   vertical-align: top;
+}
+#info .profile-picture img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+@media (min-width: 768px) {
+  #info .profile-picture {
+    display: inline-block;
+  }
 }
 #info .details {
   display: inline-block;
@@ -2757,16 +2790,20 @@ body {
 #about-me {
   background-color: #B0BEC5;
 }
-#ten-thousand-coffees {
+#about-me a {
+  text-decoration: none;
+  color: #666666;
+}
+#ten-thousand-coffees .card-collapsed {
   background-color: #A5D6A7;
 }
-#envisage {
+#envisage .card-collapsed {
   background-color: #81D4FA;
 }
-#oicr {
+#oicr .card-collapsed {
   background-color: #FF8A65;
 }
-#scicalc {
+#scicalc .card-collapsed {
   background-color: #FFEB3B;
 }
 @font-face {

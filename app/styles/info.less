@@ -8,8 +8,18 @@
   }
 
   .profile-picture {
-    display: inline-block;
+    display: block;
     vertical-align: top;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 100%;
+    }
+
+    @media (min-width: @screen-sm-min) {
+      display: inline-block;
+    }
   }
 
   .details {
