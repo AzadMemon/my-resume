@@ -1,9 +1,60 @@
 #about-me {
+  display: table;
   background-color: #B0BEC5;
+  padding: 20px 35px;
 
   a {
     text-decoration: none;
     color: #666666;
+  }
+
+  .wrapper {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .profile-picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+    .make-sm-column(3);
+    margin-bottom: 25px;
+
+    @media (min-width: @screen-sm-min) {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .about {
+    display: inline-block;
+    font-size: 1.25em;
+    margin-bottom: 25px;
+    text-align: center;
+    .make-sm-column(9);
+
+    @media (min-width: @screen-sm-min) {
+      text-align: left;
+    }
+  }
+
+  .social-icons {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 10px 25px 0 25px;
+    border-top: 1px solid #666;
   }
 }
 

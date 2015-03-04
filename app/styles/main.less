@@ -73,7 +73,6 @@ body {
   }
 }
 
-/* Body */
 .card {
   position: relative;
   border-radius: 0;
@@ -81,66 +80,45 @@ body {
   box-shadow: none;
   margin-bottom: 0;
   overflow: hidden;
-  height: 350px;
 }
 
-@card-height: 350px;
 .card-collapsed {
   display: table;
   position: absolute;
-  min-height: @card-height;
   padding: 20px 35px;
   margin-left: auto;
   margin-right: auto;
+  min-height: 350px;
+  height: 350px;
+  width: 100%;
+
+  .wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+  }
 
   .card-image {
     .make-sm-column(3);
+  }
 
-    a img {
-      height: 150px;
-      width: 150px;
-      border-radius: 100%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  .card-image a img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
 
     @media (min-width: @screen-sm-min) {
-      display: table-cell;
-      float: none !important;
-      vertical-align: middle;
+      margin-bottom: 0;
     }
   }
 
   .card-body {
-    font-weight: 500;
     .make-sm-column(9);
     text-align: center;
-
-    .card-heading {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    button {
-      background-color: transparent;
-      float: none;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 45px;
-      min-height: 45px;
-      padding-left: 15px;
-      padding-right: 15px;
-      font-weight: 700;
-      border: 1px solid #666666;
-
-      @media (min-width: @screen-sm-min) {
-        float: right;
-        margin-right: 25px;
-      }
-    }
 
     @media (min-width: @screen-sm-min) {
       float: none !important;
@@ -149,20 +127,78 @@ body {
       vertical-align: middle;
     }
   }
+
+  .card-body .card-heading {
+    font-size: 2em;
+    font-weight: 700;
+
+    @media (min-width: @screen-sm-min) {
+      margin-bottom: 0.25em;
+    }
+  }
+
+  .card-body .card-summary {
+    font-size: 1.5em;
+    margin-bottom: 0.75em;
+    font-weight: 500;
+  }
+
+  .card-body button {
+    background-color: transparent;
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 45px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 700;
+    border: 1px solid #666666;
+
+    @media (min-width: @screen-sm-min) {
+      float: right;
+      margin-right: 25px;
+    }
+  }
 }
 
 .card-expanded {
   position: absolute;
-  bottom: 350px;
+  bottom: 1000px;
   width: 100%;
   background-color: #FFFFFF;
 
   .card-heading {
-
+    padding: 10px 25px;
+    font-size: 1.5em;
+    font-weight: 700;
   }
 
   .card-body {
+    padding: 20px 25px;
+    font-size: 1.1em;
+  }
 
+  .card-body h1 {
+    font-size: 1.1em;
+  }
+
+  .card-body button {
+    background-color: transparent;
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 45px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 700;
+    border: 1px solid #666666;
+
+    @media (min-width: @screen-sm-min) {
+      float: right;
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -175,7 +211,7 @@ body {
   padding: 5px 10px;
 }
 
-@import "info.less";
+@import "header.less";
 @import "about.less";
 @import "tenthousandcoffees.less";
 @import "envisage.less";

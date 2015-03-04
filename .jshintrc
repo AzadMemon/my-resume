@@ -19,6 +19,7 @@
   "globals": {
     "$": true,
     "PhotoSwipe": true,
-    "PhotoSwipeUI_Default": true
+    "PhotoSwipeUI_Default": true,
+    "TweenLite": true
   }
 }

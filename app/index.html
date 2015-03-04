@@ -18,10 +18,6 @@
   <!-- endbuild -->
 </head>
 <body>
-<!--[if lt IE 9]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please
-  <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
 
 <div class="container">
 <div id="info" class="row">
@@ -52,7 +48,7 @@
       Ten Thousand Coffees
     </div>
     <div class="card-body">
-      <h1>Tasks</h1>
+      <h1>Projects</h1>
       <ul>
         <li>Lead the change from using backbone.js as our front-end framework to AngularJS</li>
         <li>Adding and maintaining features throughout the site</li>
@@ -72,45 +68,49 @@
       <div class="screenshots row">
         <div class="col-xs-6 col-md-3">
           <a class="thumbnail" data-index="0" data-src="images/ttc-profile1.png" data-width="1300" data-height="700">
-            <img src="images/ttc-profile-thumbnail.png">
+            <img class="lazy" data-original="images/ttc-profile-thumbnail.png">
           </a>
         </div>
         <div class="col-xs-6 col-md-3">
           <a class="thumbnail" data-index="1" data-src="images/ttc-conversationlist1.png" data-width="1300" data-height="700">
-            <img src="images/ttc-conversationlist-thumbnail.png">
+            <img class="lazy" data-original="images/ttc-conversationlist-thumbnail.png">
           </a>
         </div>
         <div class="col-xs-6 col-md-3">
           <a class="thumbnail" data-index="2" data-src="images/ttc-conversationview1.png" data-width="1300" data-height="700">
-            <img src="images/ttc-conversationview-thumbnail.png">
+            <img class="lazy" data-original="images/ttc-conversationview-thumbnail.png">
           </a>
         </div>
         <div class="col-xs-6 col-md-3">
           <a class="thumbnail" data-index="3" data-src="images/ttc-scheduling1.png" data-width="1300" data-height="700">
-            <img src="images/ttc-scheduling-thumbnail.png">
+            <img class="lazy" data-original="images/ttc-scheduling-thumbnail.png">
           </a>
         </div>
       </div>
+
+      <button class="learn-less">Learn Less</button>
     </div>
   </div>
 
   <div class="card-collapsed">
-    <div class="card-image">
-      <a href="http://www.tenthousandcoffees.com">
-        <img class="lazy" data-original="http://placekitten.com/150/200">
-      </a>
-    </div>
-
-    <div class="card-body">
-      <div class="card-heading">
-        Ten Thousand Coffees
+    <div class="wrapper">
+      <div class="card-image">
+        <a href="http://www.tenthousandcoffees.com">
+          <img class="lazy" data-original="http://placekitten.com/150/200">
+        </a>
       </div>
 
-      Ten Thousand Coffees has been an amazing startup to work at. I joined the team for my third coop position only a few months
-      after they started. Falling in love with the idea and the impact I was able to have on such a young startup, I decided to
-      take a full-time offer for a year.
+      <div class="card-body">
+        <div class="card-heading">
+          Ten Thousand Coffees
+        </div>
 
-      <button class="learn-more">Learn More</button>
+        <div class="card-summary">
+          A social platform where industry professionals and the next generation can have mutually beneficial conversations that move them forward.
+        </div>
+
+        <button class="learn-more">Learn More</button>
+      </div>
     </div>
   </div>
 </div>
@@ -118,7 +118,7 @@
 <div id="envisage" class="row card">
   <div class="card-expanded">
     <div class="card-heading">
-      <a href="http://www.envisageny.com">Envisage Engagement Technologies</a> - Mobile Developer
+      Envisage Engagement Technologies - Mobile Developer
     </div>
 
     <div class="card-body">
@@ -147,34 +147,39 @@
       <div class="screenshots row">
         <div class="col-xs-6 col-md-3">
           <a class="thumbnail" data-index="0" data-src="images/envisage-remi1.png" data-width="1500" data-height="600">
-            <img src="images/envisage-remi-thumbnail.png">
+            <img class="lazy" data-original="images/envisage-remi-thumbnail.png">
           </a>
         </div>
         <div class="col-xs-6 col-md-3">
           <a class="thumbnail" data-index="1" data-src="images/envisage-cnh1.png" data-width="1300" data-height="680">
-            <img src="images/envisage-cnh-thumbnail.png">
+            <img class="lazy" data-original="images/envisage-cnh-thumbnail.png">
           </a>
         </div>
       </div>
+
+      <button class="learn-less">Learn Less</button>
     </div>
   </div>
 
   <div class="card-collapsed">
-    <div class="card-image">
-      <a href="http://www.tenthousandcoffees.com">
-        <img class="lazy" data-original="http://placekitten.com/150/200">
-      </a>
-    </div>
-
-    <div class="card-body">
-      <div class="card-heading">
-        Envisage Engagement Technologies
+    <div class="wrapper">
+      <div class="card-image">
+        <a href="http://www.tenthousandcoffees.com">
+          <img class="lazy" data-original="http://placekitten.com/150/200">
+        </a>
       </div>
 
-      I worked at Envisage Engagement Technologies for my second coop position. It was at the time still a small company,
-      so I was given some freedom in the kinds of tasks I wanted to do.
+      <div class="card-body">
+        <div class="card-heading">
+          Envisage Engagement Technologies
+        </div>
 
-      <button class="learn-more">Learn More</button>
+        <div class="card-summary">
+          Engaging users at events by combining interaction with technology
+        </div>
+
+        <button class="learn-more">Learn More</button>
+      </div>
     </div>
   </div>
 </div>
@@ -182,7 +187,7 @@
 <div id="oicr" class="row card">
   <div class="card-expanded">
     <div class="card-heading">
-      <a href="http://www.oicr.on.ca">Ontario Institute for Cancer Research</a> - Software Developer
+      Ontario Institute for Cancer Research - Software Developer
     </div>
 
     <div class="card-body">
@@ -200,26 +205,29 @@
         <li>Dropwizard, Elasticsearch</li>
         <li>Jquery, Bootstrap, AngularJS</li>
       </ul>
+
+      <button class="learn-less">Learn Less</button>
     </div>
   </div>
 
   <div class="card-collapsed">
-    <div class="card-image">
-      <a href="http://www.tenthousandcoffees.com">
-        <img class="lazy" data-original="http://placekitten.com/150/200">
-      </a>
-    </div>
-
-    <div class="card-body">
-      <div class="card-heading">
-        Ontario Institute for Cancer Research
+    <div class="wrapper">
+      <div class="card-image">
+        <a href="http://www.tenthousandcoffees.com">
+          <img class="lazy" data-original="http://placekitten.com/150/200">
+        </a>
       </div>
 
-      Being my first coop job and career step, Ontario Institute for Cancer Research was a big learning experience.
-      I got to apply a bit of the basic java knowledge I had gained from school and personal projects, but learnt many new things,
-      like package management, writing clean code, and advanced debugging and profiling tools.
+      <div class="card-body">
+        <div class="card-heading">
+          Ontario Institute for Cancer Research
+        </div>
 
-      <button class="learn-more">Learn More</button>
+        <div class="card-summary">
+          From simulated data generation to genome browsers, Ontario Institute for Cancer Research was an unforgettable learning experience.
+        </div>
+        <button class="learn-more">Learn More</button>
+      </div>
     </div>
   </div>
 </div>
@@ -227,7 +235,7 @@
 <div id="scicalc" class="row card">
   <div class="card-expanded">
     <div class="card-heading">
-      <a href="https://play.google.com/store/apps/details?id=scientific.calculator&hl=en" target="_blank">Scientific Calculator</a> - Android Application Developer
+      Scientific Calculator - Android Application Developer
     </div>
 
     <div class="card-body">
@@ -242,66 +250,70 @@
       <div class="screenshots row">
         <div class="col-xs-6 col-md-3">
           <a class="thumbnail" data-index="0" data-src="images/scicalc-portrait1.png" data-width="450" data-height="800">
-            <img src="images/scicalc-portrait-thumbnail.png">
+            <img class="lazy" data-original="images/scicalc-portrait-thumbnail.png">
           </a>
         </div>
         <div class="col-xs-6 col-md-3">
           <a class="thumbnail" data-index="1" data-src="images/scicalc-landscape1.png" data-width="1300" data-height="700">
-            <img src="images/scicalc-landscape-thumbnail.png">
+            <img class="lazy" data-original="images/scicalc-landscape-thumbnail.png">
           </a>
         </div>
       </div>
+
+      <button class="learn-less">Learn Less</button>
     </div>
   </div>
 
   <div class="card-collapsed">
-    <div class="card-image">
-      <a href="http://www.tenthousandcoffees.com">
-        <img class="lazy" data-original="http://placekitten.com/150/200">
-      </a>
-    </div>
-
-    <div class="card-body">
-      <div class="card-heading">
-        Scientific Calculator
+    <div class="wrapper">
+      <div class="card-image">
+        <a href="http://www.tenthousandcoffees.com">
+          <img class="lazy" data-original="http://placekitten.com/150/200">
+        </a>
       </div>
 
-      Being in high school, and getting introduced to some basic concepts of object oriented programming, I decided it
-      was time that I attempt to apply my knowledge. Developing for Android was a no brainer since I owned an android phone,
-      knew java, and it had the least friction for entry.
+      <div class="card-body">
+        <div class="card-heading">
+          Scientific Calculator
+        </div>
 
-      <button class="learn-more">Learn More</button>
+        <div class="card-summary">
+          Serving as my first ever playground in the world of programming, building this scientific calculator was the first application of the knowledge I had gained early on in my career.
+        </div>
+
+        <button class="learn-more">Learn More</button>
+      </div>
     </div>
   </div>
 </div>
 
-<div id="about-me" class="row card">
-  <div class="card-collapsed">
-    <div class="card-image">
-      <a href="http://www.tenthousandcoffees.com">
-        <img class="profile-picture lazy" data-original="images/profile-picture.png">
-      </a>
-    </div>
+<div id="about-me" class="row">
+  <div class="wrapper">
+    <div class="body-wrapper">
+      <div class="profile-picture">
+        <a href="http://www.tenthousandcoffees.com">
+          <img class="lazy" data-original="images/profile-picture.png">
+        </a>
+      </div>
 
-    <div class="card-body">
-      I'm an Engineer in the making at the University of Waterloo.<br/><br/>
+      <div class="about">
+        I'm an Engineer in the making at the University of Waterloo.<br/><br/>
 
-      I've been a web developer for most of my early career. I really want to get into the hardware space,
-      and I'm thinking of specializing in either security or artificial intelligence.<br/><br/>
+        I've been a web developer for most of my early career but I'm also looking forward to taking on projects in the hardware space and/or low-level programming languages.<br/><br/>
 
-      I love a challenge. It's the growth involved, the feeling at the end of the day
-      that I learnt something new, that's what excites me about challenge. The challenge obviously has to lie somewhere
-      in my interests, but not at all necessarily what I'm good at.<br/><br/>
+        I've lately acquired an interest in locking down my math skills, and attempting to apply them more in the work I do.<br/><br/>
 
-      As for interests and such, I love reading fiction books, as well as a few non-fiction/self-help books. I love running,
-      although I don't run nearly as much as I would like to. And biking, reserved for summer weekends, is an awesome release.
-
-      <div class="social-icons">
-        <a href="https://github.com/AzadMemon" target="_blank"><i class="icon icon-github-circled"></i></a>
-        <a href="http://stackoverflow.com/users/1478376/azadmemon" target="_blank"><i class="icon icon-stackoverflow"></i></a>
-        <a href="http://ca.linkedin.com/pub/azad-memon/49/51a/97a/en" target="_blank"><i class="icon icon-linkedin"></i></a>
+        I'm always looking for freelance projects to take on in my spare time. You're welcome to
+        <a href="mailto:azad.memon@gmail.com">email me</a>, or get to know my work further using the following links.
       </div>
     </div>
+
+    <div class="social-icons">
+      <a href="https://github.com/AzadMemon" target="_blank"><i class="icon icon-github-circled"></i></a>
+      <a href="http://stackoverflow.com/users/1478376/azadmemon" target="_blank"><i class="icon icon-stackoverflow"></i></a>
+      <a href="http://ca.linkedin.com/pub/azad-memon/49/51a/97a/en" target="_blank"><i class="icon icon-linkedin"></i></a>
+    </div>
+
   </div>
 </div>
 </div>
