@@ -1,5 +1,6 @@
 // Core Variables and Mixins
-@import "variables";
+@import "variables.less";
+
 // Bootstrap Mixins - Utilities
 @import "mixins/hide-text.less";
 @import "mixins/opacity.less";
@@ -44,179 +45,34 @@ input,
 form {
   font-family: 'Open Sans', serif;
   font-size: 16px;
-  font-weight: 300;
-  color: #666666;
+  font-weight: 400;
+  color: @grey;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
 }
 
 body {
-  background-color: #F2F1EF;
-  padding-top: 15px;
-  padding-bottom: 10px;
+  background-color: @soft-orange;
 }
 
-.browsehappy {
-  background: #ccc;
-  color: #000;
-  margin: 0.2em 0;
-  padding: 0.2em 0;
+.golden-ratio (@dividend){
+  @result: @dividend/@golden-ratio;
 }
 
-.details {
-  h1,
-  .bio,
-  .contact {
-    text-align: center;
-
-    @media (min-width: @screen-sm-min) {
-      text-align: left;
-    }
-  }
-}
-
-.card {
-  position: relative;
-  border-radius: 0;
-  cursor: default;
-  box-shadow: none;
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.card-collapsed {
-  display: table;
-  position: absolute;
-  padding: 20px 35px;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 350px;
-  height: 350px;
-  width: 100%;
-
-  .wrapper {
-    display: table-cell;
-    vertical-align: middle;
-    width: 100%;
-  }
-
-  .card-image {
-    .make-sm-column(3);
-  }
-
-  .card-image a img {
-    height: 150px;
-    width: 150px;
-    border-radius: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
-
-    @media (min-width: @screen-sm-min) {
-      margin-bottom: 0;
-    }
-  }
-
-  .card-body {
-    .make-sm-column(9);
-    text-align: center;
-
-    @media (min-width: @screen-sm-min) {
-      float: none !important;
-      display: table-cell;
-      text-align: left;
-      vertical-align: middle;
-    }
-  }
-
-  .card-body .card-heading {
-    font-size: 2em;
-    font-weight: 700;
-
-    @media (min-width: @screen-sm-min) {
-      margin-bottom: 0.25em;
-    }
-  }
-
-  .card-body .card-summary {
-    font-size: 1.5em;
-    margin-bottom: 0.75em;
-    font-weight: 500;
-  }
-
-  .card-body button {
-    background-color: transparent;
-    float: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 45px;
-    padding-left: 25px;
-    padding-right: 25px;
-    font-weight: 700;
-    border: 1px solid #666666;
-
-    @media (min-width: @screen-sm-min) {
-      float: right;
-      margin-right: 25px;
-    }
-  }
-}
-
-.card-expanded {
-  position: absolute;
-  bottom: 1000px;
-  width: 100%;
-  background-color: #FFFFFF;
-
-  .card-heading {
-    padding: 10px 25px;
-    font-size: 1.5em;
-    font-weight: 700;
-  }
-
-  .card-body {
-    padding: 20px 25px;
-    font-size: 1.1em;
-  }
-
-  .card-body h1 {
-    font-size: 1.1em;
-  }
-
-  .card-body button {
-    background-color: transparent;
-    float: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 45px;
-    padding-left: 25px;
-    padding-right: 25px;
-    font-weight: 700;
-    border: 1px solid #666666;
-
-    @media (min-width: @screen-sm-min) {
-      float: right;
-      margin-bottom: 25px;
-    }
-  }
-}
-
-.thumbnail {
-  border-radius: 0;
-}
-
-.social-icons .icon {
-  font-size: 25px;
-  padding: 5px 10px;
-}
-
+@import "brand.less";
 @import "header.less";
-@import "about.less";
-@import "tenthousandcoffees.less";
-@import "envisage.less";
-@import "oicr.less";
-@import "scicalc.less";
+@import "footer.less";
+@import "card.less";
 
 @import "font.less";
 @import "lightbox.less";
