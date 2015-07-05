@@ -2,3 +2,6 @@ node_modules
 dist
 .tmp
 bower_components
+**/.idea/workspace.xml
+**/.idea/tasks.xml
+**/.idea/jsLibraryMappings.xml

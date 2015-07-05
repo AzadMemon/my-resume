@@ -1,17 +1,22 @@
 .header {
-  margin-bottom: 25px;
-
-  .top-border{
-    height: 15px;
-    background-color: @green;
+  .top-header {
+    height: 200px;
+    background-color: @light-grey;
     width: 100%;
+    text-align: center;
+    padding-top: 25px;
+
+    .border {
+      height: 15px;
+      border-top: 4px solid @red;
+      background-color: @light-grey;
+    }
   }
 
-  .header-container {
+  .lower-header {
     border-bottom: 1px solid @white;
     .container();
     margin: 25px 15px 50px 15px;
-    padding-top: 25px;
     padding-bottom: 15px;
 
     @media (min-width: @screen-sm-min) {
@@ -32,16 +37,19 @@
 
   .header-image img {
     border-radius: 100%;
-    border: 1px solid @white;
     height: 100%;
     width: 100%;
   }
 
   .header-name {
-    color: @white;
+    color: @dark-grey;
     text-align: center;
     display: block;
-    font-weight: 500;
+    font-weight: 900;
+    line-height: 2em;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
   }
 
   .header-about-me {
