@@ -5,3 +5,5 @@ bower_components
 **/.idea/workspace.xml
 **/.idea/tasks.xml
 **/.idea/jsLibraryMappings.xml
+app/styles/*.css
+.DS_Store
