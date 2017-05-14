@@ -2,121 +2,109 @@
   margin-bottom: 50px;
 }
 
-.card {
+.card-container {
+  background-color: @dark-grey;
+  .container();
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 15px 25px 0 25px;
+
+  @media (min-width: @screen-md-min) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.card-heading {
+  margin-top: 25px;
+  font-weight: 400;
+  padding-bottom: 5px;
+  border-bottom: 2px solid @grey;
+}
+
+.card-body {
+  margin-bottom: 15px;
+}
+
+.card-body-description {
   margin-bottom: 25px;
+}
 
-  .card-container {
-    background-color: @dark-grey;
-    .container();
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 15px 25px 0 25px;
+.card-body-thumbnails {
+  .make-row();
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-    @media (min-width: @screen-md-min) {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
+.card-body-thumbnails .thumbnail {
+  .make-md-column(3);
+  background-color: transparent;
+  border: 0;
+  position: relative;
+}
 
-  .card-heading {
-    color: @white;
-    margin-top: 0;
-    font-weight: 400;
-    padding-bottom: 5px;
-    border-bottom: 2px solid @red;
-  }
+.card-body-thumbnails .thumbnail span {
+  position: relative;
 
-  .card-body {
-    margin-bottom: 15px;
-    color: @white;
-  }
-
-  .card-body-description {
-    margin-bottom: 25px;
-    color: @white;
-  }
-
-  .card-body-projects {
-    color: @white;
-  }
-
-  .card-body-thumbnails {
-    .make-row();
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .card-body-thumbnails .thumbnail {
-    .make-md-column(3);
-    background-color: transparent;
-    border: 0;
-    position: relative;
-  }
-
-  .card-body-thumbnails .thumbnail span {
-    position: relative;
-
-    @media (min-width: @screen-md-min) {
-      &:hover {
-        .icon {
-          display: block;
-        }
+  @media (min-width: @screen-md-min) {
+    &:hover {
+      .icon {
+        display: block;
       }
     }
   }
+}
 
-  .card-body-thumbnails .thumbnail span .icon.mobile {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    color: @light-grey;
-    font-size: 20px;
-  }
+.card-body-thumbnails .thumbnail span .icon.mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  color: @light-grey;
+  font-size: 20px;
+}
 
-  .card-body-thumbnails .thumbnail span .icon {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 32px;
-    height: 32px;
-    margin: -24px 0 0 -24px;
-    color: @light-grey;
-    font-size: 32px;
-  }
+.card-body-thumbnails .thumbnail span .icon {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  margin: -24px 0 0 -24px;
+  color: @light-grey;
+  font-size: 32px;
+}
 
-  .card-body-thumbnails .thumbnail span img {
-    border: 2px solid @dark-grey;
-    border-radius: 0;
-    height: 150px;
-    width: 200px;
-    position: relative;
-    left: 50%;
-    margin-left: -100px;
+.card-body-thumbnails .thumbnail span img {
+  border: 2px solid @dark-grey;
+  border-radius: 0;
+  height: 150px;
+  width: 200px;
+  position: relative;
+  left: 50%;
+  margin-left: -100px;
 
-    @media (min-width: @screen-md-min) {
-      &:hover {
-        opacity: 0.2;
-      }
+  @media (min-width: @screen-md-min) {
+    &:hover {
+      opacity: 0.2;
     }
   }
+}
 
-  .card-tags {
-    padding: 10px 0;
-    line-height: 2.5em;
-    text-align: center;
+.card-tags {
+  padding: 10px 0;
+  line-height: 2.5em;
+  text-align: center;
 
-    @media (min-width: @screen-md-min) {
-      text-align: left;
-    }
+  @media (min-width: @screen-md-min) {
+    text-align: left;
   }
+}
 
-  .card-tags span {
-    padding: 5px 10px;
-    background-color: @red;
-    margin-bottom: 5px;
-    color: @white;
-  }
+.card-tags span {
+  padding: 5px 10px;
+  background-color: @light-grey;
+  margin-bottom: 5px;
 }

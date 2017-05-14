@@ -1,38 +1,20 @@
 .header {
-  .top-header {
-    height: 200px;
-    background-color: @light-grey;
-    width: 100%;
-    text-align: center;
-    padding-top: 25px;
+  margin-bottom: 25px;
 
-    .border {
-      height: 15px;
-      border-top: 4px solid @red;
-      background-color: @light-grey;
-    }
+  .top-header {
+    padding-top: 25px;
   }
 
   .lower-header {
-    b
     border-bottom: 1px solid @white;
-    background-color: @dark-grey;
-    width: 100%;
-    padding: 25px 15px 25px 15px;
-    margin-bottom: 50px;
-
-    @media (min-width: @screen-sm-min) {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
+    width:100%;
   }
 
   .header-image {
-    display: block;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    vertical-align:top;
   }
 
   .header-image img {
@@ -42,31 +24,23 @@
   }
 
   .header-name {
+    vertical-align:top;
     color: @dark-grey;
-    text-align: center;
-    display: block;
-    font-weight: 900;
-    line-height: 2em;
-    margin-bottom: 0;
-    margin-top: 0;
+    font-size: 2em;
     text-transform: uppercase;
+    display: inline-block;
   }
 
   .header-about-me {
-    color: @white;
+    color: @dark-grey;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 45px;
-    max-width: 500px;
-    text-align: center;
   }
 
   .header-contact {
     text-align: center;
 
     a {
-      color: @white;
+      color: @dark-grey;
       font-size: 1.6em;
       padding-left: 10px;
       padding-right: 10px;
